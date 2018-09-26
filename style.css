@@ -60,4 +60,22 @@ body {
     background-color: #695848;
     transform: translateX(5rem); }
 
+.mouth {
+  z-index: 999;
+  position: absolute;
+  height: .7rem;
+  width: 4rem;
+  background-color: #695848;
+  border-radius: 100%;
+  margin-left: 11rem;
+  margin-top: 4rem; }
+  .mouth:before, .mouth:after {
+    content: '';
+    position: absolute;
+    border-top: 15px solid #FDF9F3;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent; }
+  .mouth:before {
+    margin-left: 3rem; }
+
 /*# sourceMappingURL=style.css.map */
