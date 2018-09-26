@@ -1,0 +1,37 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #F9EED7; }
+
+.container > * {
+  position: absolute; }
+
+.container {
+  margin: 0 auto;
+  width: 220px;
+  height: 100px;
+  margin-top: 5rem; }
+
+.band {
+  margin-left: -4.5rem;
+  border-radius: 30px;
+  height: 8rem;
+  width: 25rem;
+  background-color: #E5C09E;
+  background: radial-gradient(#E6D5AB 15%, transparent 16%), radial-gradient(#E6D5AB 15%, transparent 16%);
+  background-size: 10px 10px;
+  background-position: 0 0, 30px 30px; }
+  .band:before {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    border-radius: 30px;
+    height: 8rem;
+    width: 25rem;
+    background-color: #E5C09E;
+    box-shadow: 3px 3px 20px #A78C73; }
+
+/*# sourceMappingURL=style.css.map */
