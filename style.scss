@@ -79,28 +79,102 @@ body {
 }
 
 .mouth {
-z-index:999;
-position: absolute;
+    z-index: 999;
+    position: absolute;
     height: .7rem;
     width: 4rem;
     background-color: #695848;
     border-radius: 100%;
     margin: {
-    left: 11rem;
-    top: 4rem;
+        left: 11rem;
+        top: 4rem;
     }
-   &:before, &:after{
-   	content: '';
-   	position: absolute; 
-   	border:{
-   		top: 15px solid #FDF9F3; 
-   		left: 7px solid transparent;
-   		right: 7px solid transparent; 
-   	}
-   }
-   &:before{
-   	margin:{
-   		left: 3rem;
-   	}
-   }
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        border: {
+            top: 15px solid #FDF9F3;
+            left: 7px solid transparent;
+            right: 7px solid transparent;
+        }
+        margin-left:.8rem;
+    }
+    &:before {
+        margin: {
+            left: 2.5rem;
+        }
+    }
+}
+
+.drip {
+    z-index: 999;
+    position: absolute;
+    width: 7px;
+    height: 12px;
+    background: #C33149;
+    border-radius: 0 0 100% 100%;
+    margin: {
+        left: 11.5rem;
+        top: 4.49rem;
+    }
+}
+
+.blood {
+    z-index: -2;
+    position: absolute;
+    height: 2rem;
+    width: 10rem;
+    background-color: #C33149;
+    margin: {
+        top: 7rem;
+        left: 8rem;
+    }
+    border-radius: 0 0 100px 100px;
+    &:before,
+    &:after {
+        height: 5rem;
+        width: 2rem;
+        position: absolute;
+        content: '';
+        background: #C33149;
+        border-radius: 0 0 100% 100%;
+        animation: 4s drip infinite ease;
+    }
+    &:before {
+        margin: {
+            left: 3rem;
+            top: -1rem;
+        }
+    }
+}
+
+.shine {
+    z-index: 1;
+    position: absolute;
+    background: #FFF;
+    height: 2rem;
+    width: .3rem;
+    border-radius: 12px;
+    animation: 4s drip infinite ease;
+    margin: {
+        top: 2rem;
+        left: .3rem;
+    }
+  
+    &:before {
+        content: '';
+        position: absolute;
+        background: #FFF;
+        height: .6rem;
+        width: .3rem;
+        margin-left: 3.2rem;
+        border-radius: 12px;
+    }
+}
+
+@keyframes drip {
+    100% {
+        transform: translateY(10px);
+    }
 }
